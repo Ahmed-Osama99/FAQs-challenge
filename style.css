@@ -1,0 +1,101 @@
+:root {
+  --White: hsl(0, 100%, 100%);
+  --Purple-100: hsl(275, 100%, 97%);
+  --Purple-600: hsl(292, 16%, 49%);
+  --Purple-950: hsl(292, 42%, 14%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--Purple-100);
+  background-image: url(./images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+@media screen and (min-width: 40em) {
+  body {
+    background-image: url(./images/background-pattern-desktop.svg);
+  }
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+.container {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--White);
+  margin: 2rem auto;
+  padding: 1.5rem;
+  box-shadow: 0 5px 10px hsla(292.5, 16%, 49%, 0.54);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.faqs-head h1,
+.question {
+  color: var(--Purple-950);
+}
+.faqs-head {
+  display: flex;
+  gap: 2rem;
+}
+.faqs-head img {
+  width: 1.5rem;
+}
+.question-box {
+  padding: 1.5rem 0;
+}
+.question-box:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.question-box:last-child {
+  padding-bottom: 0;
+}
+.question-box .question {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+.question-box .question img {
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.question-box .answer {
+  display: none;
+  margin-block-start: 1rem;
+  color: var(--Purple-600);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.question-box .answer.view {
+  display: block;
+}
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.5;
+  color: var(--Purple-950);
+}
+.attribution a {
+  color: var(--Purple-950);
+  text-decoration: none;
+  font-weight: 600;
+}
